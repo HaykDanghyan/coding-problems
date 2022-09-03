@@ -1,3 +1,3 @@
 <div align="center">
-    <p><b>Solutions to the 'Crack the coding interview' problems</b></p>
+    <h1><b>Solutions to the 'Crack the coding interview' problems<h1></p>
 </div>
