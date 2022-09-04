@@ -1,7 +1,10 @@
 #include "node.h"
 #include <iostream>
 
-int returnKthFromLast(Node* head, int k) {
+Node* returnKthFromLast(Node* head, int k) {
+    if (!head) {
+        return nullptr;
+    }
     Node* curr = head;
     int size = 0;
     while (curr) {
@@ -13,7 +16,8 @@ int returnKthFromLast(Node* head, int k) {
     while (size--) {
         curr = curr->next;
     }
-    return curr->val; 
+    curr->next = nullptr;
+    return curr;
 }
 
 int main() {
@@ -27,5 +31,6 @@ int main() {
     head->next->next->next->val = 4;
     head->next->next->next->next = new Node;
     head->next->next->next->next->val = 5;
-    std::cout << returnKthFromLast(head, 2);
+    Node* res = returnKthFromLast(head, 2);
+    std::cout << res->val << std::endl;
 }
