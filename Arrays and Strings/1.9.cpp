@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <string>
 bool stringRotation(std::string& s1, std::string& s2) {
     auto x = s1.length();
     while (x--) {
